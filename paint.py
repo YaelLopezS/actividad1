@@ -13,6 +13,8 @@ from turtle import *
 
 from freegames import vector
 
+import math
+
 
 def line(start, end):
     """Draw line from start to end."""
@@ -36,9 +38,8 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
-    """Draw circle from start to end."""
-    pass  # TODO
+def circle2(start, end):
+    pass # TODO
 
 
 def rectangle(start, end):
@@ -60,7 +61,7 @@ def tap(x, y):
     else:
         shape = state['shape']
         end = vector(x, y)
-        shape(start, end)
+        shape(start,end)
         state['start'] = None
 
 
@@ -79,9 +80,10 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('orange'), 'O')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circle2), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
