@@ -39,7 +39,13 @@ def square(start, end):
 
 
 def circle2(start, end):
-    pass # TODO
+    up()
+    goto(start.x,start.y)
+    down()
+    radius = abs(math.sqrt((end.x - start.x)**2 + (end.y - start.y)**2))
+    begin_fill()
+    circle(radius)
+    end_fill()
 
 
 def rectangle(start, end):
